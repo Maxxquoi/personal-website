@@ -30,6 +30,6 @@
 				'description' => '<ul><li><b>Research: </b>Help designed and collected data for usability studies on products that require users to interact with digital environments ranging from commercial interactive tutoring systems to mobile devices.</li></ul>',
 			),
 		),
-		'footer' => '<div class="btn-group btn-group-justified" role="group"><a class="btn btn-danger btn-raised btn-lg" href="//shared.hadriencroubois.com/CrouboisHadrienEN.pdf" target="_blank">View my full resume</a></div>',
+		'footer' => '<div class="btn-group btn-group-justified" role="group"><a class="btn btn-danger btn-raised btn-lg" href="../../shared/Emmanuel_Massaquoi_Resume_9_13_18.pdf" target="_blank">View my full resume</a></div>',
 	);
 ?>
