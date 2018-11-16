@@ -131,30 +131,3 @@ nav.navbar
 {
 	text-align:            justify;
 }
-/*****************************************************************************
- *                          P u b l i c a t i o n s                          *
- *****************************************************************************/
-.publication
-{
-	padding:               10px 0;
-}
-.publication-title-short
-{
-	text-overflow:         ellipsis;
-	overflow:              hidden;
-	text-align:            center;
-	margin:                3px 0;
-}
-#publications .publication-title-short
-{
-	white-space:           nowrap;
-}
-
-/*****************************************************************************
- *                                   M a p                                   *
- *****************************************************************************/
-.map
-{
-	margin:                10px 0;
-	height:                60vh;
-}

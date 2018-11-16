@@ -163,8 +163,8 @@ class phpFastCache {
             $securityKey.= "/";
         }
 
-        // $full_path = $path."/".$securityKey;
-        $full_path = $path."".$securityKey;
+        $full_path = $path."/".$securityKey;
+        // $full_path = $path."".$securityKey;
         
         $full_pathx = md5($full_path);
 
