@@ -10,9 +10,8 @@ if ($html == null)
 {
 	require_once 'config/data.inc';
 	require_once 'assets/libs/Twig/Autoloader.php';
-	
-	Twig_Autoloader::register();
 
+	Twig_Autoloader::register();
 	$loader   = new Twig_Loader_Filesystem('assets/templates');
 	$twig     = new Twig_Environment($loader, array());
 	$template = $twig->loadTemplate('index.twig');

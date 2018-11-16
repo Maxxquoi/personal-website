@@ -93,6 +93,9 @@ class phpFastCache {
         $this->instance = phpFastCache($storage,$config);
     }
 
+
+
+
     public function __call($name, $args) {
         $str = implode(",",$args);
         eval('return $this->instance->$name('.$str.');');
@@ -154,7 +157,6 @@ class phpFastCache {
         if($securityKey == "" || $securityKey == "auto") {
             $securityKey = self::$config['securityKey'];
             if($securityKey == "auto" || $securityKey == "") {
-
                 $securityKey = isset($_SERVER['HTTP_HOST']) ? ltrim(strtolower($_SERVER['HTTP_HOST']),"www.") : "default";
                 $securityKey = preg_replace("/[^a-zA-Z0-9]+/","",$securityKey);
             }
@@ -164,25 +166,25 @@ class phpFastCache {
         }
 
         $full_path = $path."/".$securityKey;
-        // $full_path = $path."".$securityKey;
-        
         $full_pathx = md5($full_path);
+
+
 
 
         if($skip_create_path  == false && !isset(self::$tmp[$full_pathx])) {
 
             if(!file_exists($full_path) || !is_writable($full_path)) {
                 if(!file_exists($full_path)) {
-                    echo mkdir($full_path,self::__setChmodAuto($config),true);
+                    mkdir($full_path,self::__setChmodAuto($config),true);
                 }
                 if(!is_writable($full_path)) {
-                    echo chmod($full_path,self::__setChmodAuto($config));
+                    chmod($full_path,self::__setChmodAuto($config));
                 }
                 if(!file_exists($full_path) || !is_writable($full_path)) {
                     die("Sorry, Please create ".$full_path." and SET Mode 0777 or any Writable Permission!");
                 }
             }
-
+            
             self::$tmp[$full_pathx] = true;
             self::htaccessGen($full_path, $config['htaccess']);
         }
