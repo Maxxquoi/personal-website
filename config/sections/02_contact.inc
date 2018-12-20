@@ -7,12 +7,12 @@
 		'icon'             => 'forum',
 		'content'          => array(
 		
-			array(
-				'title'   => 'Phone',
-				'icon'    => 'call',
-				'content' => '
-					<p><span class="label label-danger" style="display: inline-block; width: 100px;">Mobile</span> &#32 &#32 &#32 317-658-0731</p>'
-			),
+			// array(
+			// 	'title'   => 'Phone',
+			// 	'icon'    => 'call',
+			// 	'content' => '
+			// 		<p><span class="label label-danger" style="display: inline-block; width: 100px;">Mobile</span> &#32 &#32 &#32 317-658-0731</p>'
+			// ),
 
 			array(
 				'title'   => 'Email',
